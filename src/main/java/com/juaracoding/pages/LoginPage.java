@@ -14,8 +14,9 @@ public class LoginPage {
         this.driver = DriverSingleton.getDriver();
         PageFactory.initElements(driver, this);
     }
+
     @FindBy(xpath = "//input[@id='username']")
-            WebElement username;
+    WebElement username;
 
     @FindBy(xpath = "//input[@id='password']")
     WebElement password;
@@ -27,6 +28,7 @@ public class LoginPage {
         username.sendKeys("weningputri3@gmail.com");
         password.sendKeys("GunakanSandiKuat");
         btnLogin.click();
+        System.out.println("Masukkan Username & Password");
     }
     public void verifikasi(){
         String menu = driver.findElement(By.xpath("//a[normalize-space()='Dashboard']")).getText();

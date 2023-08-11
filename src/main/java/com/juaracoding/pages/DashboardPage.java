@@ -18,11 +18,11 @@ public class DashboardPage {
     @FindBy(xpath = "//a[normalize-space()='My Account']")
     WebElement btnMenuLogin;
 
-    @FindBy(xpath = "")
-    WebElement btnMenuWishList;
-
-    @FindBy(xpath = "")
-    WebElement btnMenuCheckout;
+//    @FindBy(xpath = "//a[normalize-space()='My Wishlist']")
+//    WebElement btnMenuWishList;
+//
+//    @FindBy(xpath = "//a[normalize-space()='Checkout']")
+//    WebElement btnMenuCheckout;
 
     public void menuClick(String menu){
         if (menu == "Login"){
@@ -31,5 +31,6 @@ public class DashboardPage {
             driver.navigate().refresh();
         }
     }
+
 
 }
