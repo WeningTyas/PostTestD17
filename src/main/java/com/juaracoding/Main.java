@@ -57,6 +57,8 @@ public class Main {
         OrderPage order = new OrderPage();
         order.browseProductClick();
 
+        scroll.scrollBy(0, 500);
+
         ShopPage shop = new ShopPage();
         shop.selectProduct(); // ini pakai list?
 
