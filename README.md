@@ -1,5 +1,5 @@
 # PostTestD17
-Repo ini dibuat untuk Post Test hari ke 17 kelas SQA
+**Repo ini dibuat untuk Post Test hari ke 17 kelas SQA**
 
 Buat automation testing menggunakan page object dan page factory untuk fitur Login pada web https://shop.demoqa.com dan fitur Add 1 product to cart
 
