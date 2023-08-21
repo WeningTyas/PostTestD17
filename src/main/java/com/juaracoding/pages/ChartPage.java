@@ -14,11 +14,19 @@ public class ChartPage {
         PageFactory.initElements(driver, this);
     }
 
+    @FindBy(xpath = "//a[@class='empty-cart']")
+    WebElement btnClear;
+
     @FindBy(xpath = "//a[@class='button wc-backward']")
     WebElement btnReturnShop;
 
     public void btnReturnShopClick(){
-        btnReturnShop.click();
+        try {
+            //kalau ada isi, dihapus dulu
+            btnClear.click();
+        } finally {
+            btnReturnShop.click();
+        }
     }
 }
 
