@@ -3,7 +3,6 @@ package com.juaracoding;
 import com.juaracoding.drivers.DriverSingleton;
 import com.juaracoding.pages.*;
 import com.juaracoding.utils.Scroll;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -48,14 +47,15 @@ public class Main {
 
     public static void addToChartTest(WebDriver driver){
         Scroll scroll = new Scroll(driver);
-
+        scroll.scrollBy(0, -500);
+        
         AccountPage akun = new AccountPage();
-        akun.orderClick();
+        akun.cartClick();
 
         scroll.scrollBy(0, 500);
 
-        OrderPage order = new OrderPage();
-        order.browseProductClick();
+        ChartPage cart = new ChartPage();
+        cart.btnReturnShopClick();
 
         scroll.scrollBy(0, 500);
 
