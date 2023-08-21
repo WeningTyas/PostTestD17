@@ -14,10 +14,10 @@ public class AccountPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//a[normalize-space()='Orders']")
-    WebElement orders;
+    @FindBy(xpath = "//span[contains(@class, 'cart-name-and-total')]")
+    WebElement btnCart;
 
-    public void orderClick(){
-        orders.click();
+    public void cartClick(){
+        btnCart.click();
     }
 }
